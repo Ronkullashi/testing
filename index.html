@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Blog</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .hidden { display: none; }
+    .post { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Mini Blogging Site</h1>
+
+  <div id="auth">
+    <h3>Sign Up</h3>
+    <input id="signup-name" placeholder="Name" />
+    <input id="signup-email" placeholder="Email" />
+    <input id="signup-pass" type="password" placeholder="Password" />
+    <button onclick="signUp()">Sign Up</button>
+
+    <h3>Login</h3>
+    <input id="login-email" placeholder="Email" />
+    <input id="login-pass" type="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="app" class="hidden">
+    <h2>Welcome, <span id="username"></span>!</h2>
+    <button onclick="logout()">Logout</button>
+
+    <h3>Post a Blog</h3>
+    <textarea id="blog-content" rows="3" cols="40" placeholder="Write something..."></textarea><br>
+    <button onclick="createPost()">Post</button>
+
+    <h3>Follow Someone</h3>
+    <input id="follow-email" placeholder="Email of user to follow" />
+    <button onclick="followUser()">Follow</button>
+
+    <h3>Your Feed</h3>
+    <div id="feed"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
